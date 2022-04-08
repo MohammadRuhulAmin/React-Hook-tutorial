@@ -13,10 +13,12 @@ import NumberArray from './Practise/Components/NumberArray';
 import UserName from './Practise/Components/UserName';
 import CompC from './components/NestedComponents/CompC';
 import GrandFather from './components/Family/GrandFather';
+import UsingMemo from './components/UseMemo/UsingMemo';
 function App() {
   return (
     <div className="App">
         <h1> React Hook </h1>
+        <UsingMemo/>
         <GrandFather/>
         <CompC/>
         <IncInfo/>

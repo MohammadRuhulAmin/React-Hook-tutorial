@@ -10,7 +10,7 @@ const Father = ()=>{
                 }
             }
             </GInfo.Consumer>
-            
+
         </div>
     )
 }
