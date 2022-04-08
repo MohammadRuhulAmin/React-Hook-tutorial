@@ -12,11 +12,12 @@ import Counter from './Practise/Components/Counter';
 import NumberArray from './Practise/Components/NumberArray';
 import UserName from './Practise/Components/UserName';
 import CompC from './components/NestedComponents/CompC';
+import GrandFather from './components/Family/GrandFather';
 function App() {
   return (
     <div className="App">
         <h1> React Hook </h1>
-      
+        <GrandFather/>
         <CompC/>
         <IncInfo/>
         <IdBtnClick/>
