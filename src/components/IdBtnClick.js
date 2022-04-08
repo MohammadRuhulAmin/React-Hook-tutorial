@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 
-
 const IdBtnClick = ()=>{
     const [id,setId] = useState()
     const [post,setPost] = useState({})
@@ -17,6 +16,7 @@ const IdBtnClick = ()=>{
                 console.log(err)
             })
     },[idBtnClick])
+
     const handleClick = ()=>{
         setIdBtnClick(id)
     }
