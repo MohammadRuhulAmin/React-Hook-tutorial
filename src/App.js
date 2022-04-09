@@ -14,6 +14,8 @@
 // import CompC from './components/NestedComponents/CompC';
 // import GrandFather from './components/Family/GrandFather';
 // import UsingMemo from './components/UseMemo/UsingMemo';
+import React from  'react'
+
 import {Routes,Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import OrderSummary from './components/Order/OrderSummary';
@@ -29,7 +31,7 @@ import FeaturedProducts from './components/FeaturedProducts';
 import NewProducts from './components/NewProducts';
 import Users from './components/DynamicRoute/Users';
 import UserDetails from './components/DynamicRoute/UserDetails';
-
+const LazyAbout = React.lazy(()=>import('./components/LazyLoading/About'))
 function App() {
   return (
     
@@ -37,7 +39,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/About' element = {<About/>}></Route>
+        <Route path='/About' element = {
+          <React.Suspense fallback='Loading...'>
+              <LazyAbout/>
+          </React.Suspense>
+        }></Route>
         <Route path='/Contact' element = {<Contactus/>}></Route>
         <Route path='order-summary' element={<OrderSummary/>}></Route>
         <Route path= 'payment' element={<Payment/>} ></Route>
