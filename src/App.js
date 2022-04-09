@@ -29,8 +29,10 @@ import FeaturedProducts from './components/FeaturedProducts';
 import NewProducts from './components/NewProducts';
 import Users from './components/DynamicRoute/Users';
 import UserDetails from './components/DynamicRoute/UserDetails';
+
 function App() {
   return (
+    
     <div className="App">
       <Navbar/>
       <Routes>
@@ -48,9 +50,7 @@ function App() {
         </Route>
         <Route path='users' element={<Users/>}></Route>
         <Route path='users/:userId' element={<UserDetails/>}></Route>
-        
       </Routes>
-      
         {
           /**
            * <h1> React Hook </h1>
