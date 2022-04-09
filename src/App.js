@@ -23,6 +23,7 @@ import { Home } from './components/RoutingTutorial/Home';
 import Payment from './components/Payment';
 import Cancel from './components/Cancel';
 import './index.css'
+import NoMatch from './components/NoMatch';
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,7 @@ function App() {
         <Route path='order-summary' element={<OrderSummary/>}></Route>
         <Route path= 'payment' element={<Payment/>} ></Route>
         <Route path='cancel' element = {<Cancel/>} ></Route>
+        <Route path='*' element = {<NoMatch/>}></Route>
       </Routes>
       
         {
