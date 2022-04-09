@@ -3,6 +3,7 @@ import {Link,Outlet} from 'react-router-dom'
 const Products = ()=>{
     return(
         <>
+        
             <div>
                 Search :  <input type="search"/>
             </div>
@@ -11,10 +12,8 @@ const Products = ()=>{
                     <li><Link to='featured'>Featured </Link></li>
                     <li><Link to='new'> New </Link></li>
                 </ul>
-                
-                
             </nav>
-            <Outlet/>
+            <Outlet/>    
         </>
         
         

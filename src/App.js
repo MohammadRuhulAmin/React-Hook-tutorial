@@ -40,6 +40,7 @@ function App() {
         <Route path='cancel' element = {<Cancel/>} ></Route>
         <Route path='*' element = {<NoMatch/>}></Route>
         <Route path='products' element = {<Products/>}>
+            <Route index element = {<FeaturedProducts />}/>
             <Route path='featured' element={<FeaturedProducts/>}></Route>
             <Route path = 'new' element = {<NewProducts/>}></Route>
         </Route>
