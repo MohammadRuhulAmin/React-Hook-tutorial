@@ -24,6 +24,9 @@ import Payment from './components/Payment';
 import Cancel from './components/Cancel';
 import './index.css'
 import NoMatch from './components/NoMatch';
+import Products from './components/Products';
+import FeaturedProducts from './components/FeaturedProducts';
+import NewProducts from './components/NewProducts';
 function App() {
   return (
     <div className="App">
@@ -36,6 +39,10 @@ function App() {
         <Route path= 'payment' element={<Payment/>} ></Route>
         <Route path='cancel' element = {<Cancel/>} ></Route>
         <Route path='*' element = {<NoMatch/>}></Route>
+        <Route path='products' element = {<Products/>}>
+            <Route path='featured' element={<FeaturedProducts/>}></Route>
+            <Route path = 'new' element = {<NewProducts/>}></Route>
+        </Route>
       </Routes>
       
         {
